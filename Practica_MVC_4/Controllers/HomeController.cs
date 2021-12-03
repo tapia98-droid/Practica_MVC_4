@@ -27,5 +27,12 @@ namespace Practica_MVC_4.Controllers
             return View();
 
         }
+        public ActionResult ListadoVisitas()
+        {
+            LibroVisitas libro = new LibroVisitas();
+            string todo = libro.Leer();
+            ViewData["Libro"] = todo;
+            return View();
+        }
     }
 }
